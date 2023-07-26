@@ -28,7 +28,14 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  let result = {};
+  people.map((element) => {
+      if (result.hasOwnProperty(element.name)) {
+          result[element.name] += element.score;
+      } else {
+          result[element.name] = element.score;}
+  });
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

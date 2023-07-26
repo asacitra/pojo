@@ -12,7 +12,15 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
-  // Your code here
+  let obje = {};
+  string.split('').map((element) => {
+    if (obje.hasOwnProperty(element)) {
+        obje[element] ++;
+      } else {
+          obje[element] = 1;
+      }
+  })
+return obje;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

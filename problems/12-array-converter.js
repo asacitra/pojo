@@ -12,8 +12,17 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here
-}
+  let obje = {};
+
+  array.map((element) => {
+      if (obje.hasOwnProperty(element)) {
+          obje[element] ++;
+        } else {
+            obje[element] = 1;
+        }
+    })
+  return obje;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
